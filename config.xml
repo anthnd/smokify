@@ -1,14 +1,25 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.anthnd.smokify" version="1.0.0">
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> anthnd-github/master
   <name>Smokify</name>
   <description>Smoke and flash essentials for Counter-Strike: Global-Offensive</description>
   <author href="http://phonegap.com" email="support@phonegap.com">Anthony N.D.</author>
   <content src="index.html"/>
+<<<<<<< HEAD
 
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="14"/>
   <preference name="BackgroundColor" value="0xff00838f"/>
 
+=======
+
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="android-minSdkVersion" value="14"/>
+
+>>>>>>> anthnd-github/master
 <!--
   <plugin name="cordova-plugin-battery-status" source="npm" spec="~1.1.1"/>
   <plugin name="cordova-plugin-camera" source="npm" spec="~2.1.1"/>
@@ -31,9 +42,15 @@
   <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.0"/>
   <plugin name="cordova-plugin-whitelist" source="npm" spec="~1.2.1"/>
 -->
+<<<<<<< HEAD
 
   <icon src="icon.png"/>
 
+=======
+
+  <icon src="icon.png"/>
+
+>>>>>>> anthnd-github/master
 <!--
   <platform name="android">
     <icon src="www/res/icon/android/drawable-ldpi-icon.png" density="ldpi"/>
@@ -55,7 +72,11 @@
     <splash src="www/res/screen/android/drawable-port-xxhdpi-screen.png" density="port-xxhdpi"/>
     <splash src="www/res/screen/android/drawable-port-xxxhdpi-screen.png" density="port-xxxhdpi"/>
   </platform>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> anthnd-github/master
   <platform name="ios">
     <icon src="www/res/icon/ios/icon.png" platform="ios" width="57" height="57"/>
     <icon src="www/res/icon/ios/icon@2x.png" platform="ios" width="114" height="114"/>
@@ -84,13 +105,21 @@
     <splash src="www/res/screen/ios/Default@2x~iphone.png" platform="ios" width="640" height="960"/>
     <splash src="www/res/screen/ios/Default~iphone.png" platform="ios" width="320" height="480"/>
   </platform>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> anthnd-github/master
   <platform name="wp8">
     <icon src="www/res/icon/wp8/ApplicationIcon.png" platform="wp8" width="99" height="99"/>
     <icon src="www/res/icon/wp8/Background.png" platform="wp8" width="159" height="159"/>
     <splash src="www/res/screen/wp8/screen-portrait.jpg" platform="wp8" width="768" height="1280"/>
   </platform>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> anthnd-github/master
   <platform name="windows">
     <icon src="www/res/icon/windows/Square150x150Logo.scale-100.png" platform="windows" width="150" height="150"/>
     <icon src="www/res/icon/windows/Square30x30Logo.scale-100.png" platform="windows" width="30" height="30"/>
@@ -108,7 +137,11 @@
     <icon src="www/res/icon/windows/Wide310x150Logo.scale-240.png" platform="windows" width="744" height="360"/>
     <splash src="www/res/screen/windows/SplashScreenPhone.scale-240.png" platform="windows" width="1152" height="1920"/>
   </platform>
+<<<<<<< HEAD
 
+=======
+
+>>>>>>> anthnd-github/master
   <access origin="*"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
@@ -116,15 +149,28 @@
   <allow-intent href="sms:*"/>
   <allow-intent href="mailto:*"/>
   <allow-intent href="geo:*"/>
+<<<<<<< HEAD
 
   <platform name="android">
     <allow-intent href="market:*"/>
   </platform>
 
+=======
+
+  <platform name="android">
+    <allow-intent href="market:*"/>
+  </platform>
+
+>>>>>>> anthnd-github/master
   <platform name="ios">
     <allow-intent href="itms:*"/>
     <allow-intent href="itms-apps:*"/>
   </platform>
 -->
+<<<<<<< HEAD
 
 </widget>
+=======
+
+</widget>
+>>>>>>> anthnd-github/master
