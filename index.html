@@ -1,0 +1,106 @@
+<!doctype html>
+<html ng-app="smokifyApp">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+    <!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *" />
+
+    <link rel="stylesheet" type="text/css" href="lib/materialize/css/material-icons.css">
+    <link rel="stylesheet" type="text/css" href="lib/materialize/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>Smokify</title>
+</head>
+
+</html>
+
+<body ng-cloak>
+    <div id="deviceready">
+        <div class="event listening">
+        </div>
+        <div class="event received">
+        </div>
+    </div>
+
+    <nav>
+        <div class="nav-wrapper teal darken-2">
+            <a href="#" data-activates="slide-out" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#/">Home</a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Maps</a></li>
+                <ul id='dropdown1' class='dropdown-content'>
+                    <li><a href="#/cache">Cache</a></li>
+                    <li><a href="#/cobblestone">Cobblestone</a></li>
+                    <li><a href="#/dust2">Dust II</a></li>
+                    <li><a href="#/inferno">Inferno</a></li>
+                    <li><a href="#/mirage">Mirage</a></li>
+                    <li><a href="#/overpass">Overpass</a></li>
+                    <li><a href="#/train">Train</a></li>
+                </ul>
+            </ul>
+            <ul id="slide-out" class="side-nav">
+                <img class="side-nav-logo" src="icon_circle.png">
+                <h4 class="black-text light-text center side-nav-logotext">Smokify</h4>
+                <li><a href="#/">Home</a></li>
+                <li class="no-padding">
+                    <ul class="collapsible collapsible-accordion">
+                        <li>
+                            <a class="collapsible-header">Maps</a>
+                            <div class="collapsible-body">
+                                <ul>
+                                    <li><a href="#/cache">Cache</a></li>
+                                    <li><a href="#/cobblestone">Cobblestone</a></li>
+                                    <li><a href="#/dust2">Dust II</a></li>
+                                    <li><a href="#/inferno">Inferno</a></li>
+                                    <li><a href="#/mirage">Mirage</a></li>
+                                    <li><a href="#/overpass">Overpass</a></li>
+                                    <li><a href="#/train">Train</a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div ng-view></div>
+    </div>
+
+
+
+
+
+    <!--    <script type="text/javascript" src="cordova.js"></script>-->
+    <!--    <script type="text/javascript" src="js/index.js"></script>-->
+    <!--
+    <script type="text/javascript">
+        app.initialize();
+    </script>
+-->
+    <!-- Librario -->
+    <script type="text/javascript" src="lib/jquery-1.12.3.min.js"></script>
+    <script type="text/javascript" src="lib/materialize/js/materialize.min.js"></script>
+    <script type="text/javascript" src="lib/angular.min.js"></script>
+    <script type="text/javascript" src="lib/angular-route.min.js"></script>
+    <script type="text/javascript" src="lib/angular-animate.min.js"></script>
+
+    <!-- Appio -->
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/home/HomeController.js"></script>
+    <script type="text/javascript" src="app/maps/MapController.js"></script>
+    <script type="text/javascript">
+        $(".button-collapse").sideNav();
+        $('.collapsible').collapsible();
+
+        $(document).ready(function(){
+            $('.side-nav').on('click', '>li>a, .collapsible-body>ul>li>a', function(){
+                $(".button-collapse").sideNav('hide');
+            })
+        })
+    </script>
+</body>
