@@ -17,7 +17,7 @@
 
 </html>
 
-<body ng-cloak>
+<body ng-controller="HomeController" ng-cloak>
     <div id="deviceready">
         <div class="event listening">
         </div>
@@ -32,13 +32,9 @@
                 <li><a href="#/">Home</a></li>
                 <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Maps</a></li>
                 <ul id='dropdown1' class='dropdown-content'>
-                    <li><a href="#/cache">Cache</a></li>
-                    <li><a href="#/cobblestone">Cobblestone</a></li>
-                    <li><a href="#/dust2">Dust II</a></li>
-                    <li><a href="#/inferno">Inferno</a></li>
-                    <li><a href="#/mirage">Mirage</a></li>
-                    <li><a href="#/overpass">Overpass</a></li>
-                    <li><a href="#/train">Train</a></li>
+                    <li ng-repeat="map in maps.mapInfo">
+                        <a href="#/map" ng-click="setMapIndex($index)">{{ map.title }}</a>
+                    </li>
                 </ul>
             </ul>
             <ul id="slide-out" class="side-nav">
@@ -51,13 +47,9 @@
                             <a class="collapsible-header">Maps</a>
                             <div class="collapsible-body">
                                 <ul>
-                                    <li><a href="#/cache">Cache</a></li>
-                                    <li><a href="#/cobblestone">Cobblestone</a></li>
-                                    <li><a href="#/dust2">Dust II</a></li>
-                                    <li><a href="#/inferno">Inferno</a></li>
-                                    <li><a href="#/mirage">Mirage</a></li>
-                                    <li><a href="#/overpass">Overpass</a></li>
-                                    <li><a href="#/train">Train</a></li>
+                                    <li ng-repeat="map in maps.mapInfo">
+                                        <a href="#/map" ng-click="setMapIndex($index)">{{ map.title }}</a>
+                                    </li>
                                 </ul>
                             </div>
                         </li>
@@ -91,14 +83,15 @@
 
     <!-- Appio -->
     <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/mapDataFactory.js"></script>
     <script type="text/javascript" src="app/home/HomeController.js"></script>
     <script type="text/javascript" src="app/maps/MapController.js"></script>
     <script type="text/javascript">
         $(".button-collapse").sideNav();
         $('.collapsible').collapsible();
 
-        $(document).ready(function(){
-            $('.side-nav').on('click', '>li>a, .collapsible-body>ul>li>a', function(){
+        $(document).ready(function () {
+            $('.side-nav').on('click', '>li>a, .collapsible-body>ul>li>a', function () {
                 $(".button-collapse").sideNav('hide');
             })
         })

@@ -1,4 +1,5 @@
 var smokifyApp = angular.module('smokifyApp', ['ngRoute', 'ngAnimate']);
+
 smokifyApp.config(function($routeProvider){
     $routeProvider
         .when('/',
@@ -40,6 +41,11 @@ smokifyApp.config(function($routeProvider){
             {
                 controller: 'MapController',
                 templateUrl: 'app/maps/train.html'
+            })
+        .when('/map/',
+            {
+                controller: 'MapController',
+                templateUrl: 'app/maps/map.html'
             })
         .otherwise({ redirectTo: '/' });
 });
